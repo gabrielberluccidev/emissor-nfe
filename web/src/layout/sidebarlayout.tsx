@@ -26,7 +26,7 @@ const SidebarLayout = () => {
           </Avatar>
 
           <div>
-            <h1 className="text-black">Emissor NFe</h1>
+            <h1 className="text-white">Emissor NFe</h1>
             <p className="text-gray-400">Plano Enterprise</p>
           </div>
         </div>
