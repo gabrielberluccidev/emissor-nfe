@@ -1,7 +1,8 @@
-import { Homepage } from './pages/home';
+
+import Notafiscal from './pages/notafiscal';
 
 function App() {
-  return <Homepage />;
+  return <Notafiscal />;
 }
 
 export { App };
