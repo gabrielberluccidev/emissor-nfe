@@ -39,6 +39,7 @@ import {
 } from '@/components/ui/chart';
 import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Title, TitleDescription, TitleRoot } from '@/components/ui/title';
 
 const Homepage = () => {
   const chartData = [
@@ -128,12 +129,12 @@ const Homepage = () => {
         </div>
 
         <div className="p-8 flex items-center justify-between">
-          <div>
-            <h1 className="text-4xl mb-4">Visão Geral</h1>
-            <p className="text-zinc-400">
+          <TitleRoot>
+            <Title>Visão Geral</Title>
+            <TitleDescription>
               Acompanhe o desempenho das suas emissões fiscais em tempo real.
-            </p>
-          </div>
+            </TitleDescription>
+          </TitleRoot>
 
           <div>
             <Popover>
