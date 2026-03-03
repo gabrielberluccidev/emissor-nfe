@@ -1,8 +1,7 @@
-
-import Notafiscal from './pages/notafiscal';
+import { Supplier } from './pages/supplier';
 
 function App() {
-  return <Notafiscal />;
+  return <Supplier />;
 }
 
 export { App };
