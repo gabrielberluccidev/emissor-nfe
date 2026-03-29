@@ -1,28 +1,28 @@
-import { SidebarProvider } from '@/components/ui/sidebar';
-import { SidebarLayout } from '@/layout/sidebarlayout';
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarLayout } from "@/layout/sidebarlayout";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+} from "@/components/ui/breadcrumb";
 import {
   Bell,
   ChevronDownIcon,
   TrendingUp,
   ClipboardMinus,
-} from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+} from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components/ui/popover';
-import { Button } from '@/components/ui/button';
-import * as React from 'react';
-import { format } from 'date-fns';
-import { Calendar } from '@/components/ui/calendar';
+} from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
+import * as React from "react";
+import { format } from "date-fns";
+import { Calendar } from "@/components/ui/calendar";
 import {
   Card,
   CardContent,
@@ -30,30 +30,30 @@ import {
   CardHeader,
   CardTitle,
   CardFooter,
-} from '@/components/ui/card';
+} from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from '@/components/ui/chart';
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Title, TitleDescription, TitleRoot } from '@/components/ui/title';
+} from "@/components/ui/chart";
+import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Title, TitleDescription, TitleRoot } from "@/components/ui/title";
 
 const Homepage = () => {
   const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 305 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 73 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 214 },
+    { month: "January", desktop: 186 },
+    { month: "February", desktop: 305 },
+    { month: "March", desktop: 237 },
+    { month: "April", desktop: 73 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 214 },
   ];
   const chartConfig = {
     desktop: {
-      label: 'Desktop',
-      color: '#8b5cf6',
+      label: "Desktop",
+      color: "#8b5cf6",
     },
   } satisfies ChartConfig;
 
@@ -74,27 +74,27 @@ const Homepage = () => {
       notesData.push({
         numnf: i.toString(),
         client: `Cliente ${120 + i}`,
-        status: 'Cancelada',
+        status: "Cancelada",
         value: `R$ ${100 + i}`,
       });
     } else {
       notesData.push({
         numnf: i.toString(),
         client: `Cliente ${120 + i}`,
-        status: 'Autorizada',
+        status: "Autorizada",
         value: `R$ ${100 + i}`,
       });
     }
   }
 
   const getStatusColor = (status: string) => {
-    if (status === 'Autorizada') {
-      return 'text-emerald-500 bg-emerald-500/10';
+    if (status === "Autorizada") {
+      return "text-emerald-500 bg-emerald-500/10";
     }
-    if (status === 'Cancelada') {
-      return 'text-red-500 bg-red-500/10';
+    if (status === "Cancelada") {
+      return "text-red-500 bg-red-500/10";
     }
-    return 'text-zinc-400 bg-zinc-800';
+    return "text-zinc-400 bg-zinc-800";
   };
 
   return (
@@ -144,7 +144,7 @@ const Homepage = () => {
                   data-empty={!date}
                   className="data-[empty=true]:text-muted-foreground w-[212px] justify-between text-left font-normal"
                 >
-                  {date ? format(date, 'PPP') : <span>Escolha a data</span>}
+                  {date ? format(date, "PPP") : <span>Escolha a data</span>}
                   <ChevronDownIcon />
                 </Button>
               </PopoverTrigger>
@@ -250,7 +250,7 @@ const Homepage = () => {
                 <div className="flex w-full items-start gap-2 text-sm">
                   <div className="grid gap-2">
                     <div className="flex items-center gap-2 leading-none font-medium">
-                      Trending up by 5.2% this month{' '}
+                      Trending up by 5.2% this month{" "}
                       <TrendingUp className="h-4 w-4" />
                     </div>
                     <div className="text-muted-foreground flex items-center gap-2 leading-none">
